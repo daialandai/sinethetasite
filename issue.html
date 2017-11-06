@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Issue #</title>
+    <meta name="description" content="Sine Theta Issue #">
+    <meta name="author" content="Alan Dai">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+    crossorigin=""></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/Turbo87/sidebar-v2/master/js/leaflet-sidebar.min.js"></script>
+    <!--[if lte IE 8]><link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Turbo87/sidebar-v2/master/css/leaflet-sidebar.min.css"/>
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Quattrocento Sans', sans-serif;
+        }
+        html, body, #map {
+            height: 100%;
+        }
+        .active a {
+            background-color: grey;
+        }
+        .sidebar-tabs {
+            /* border: 3px solid black; */
+        }
+        .sidebar-header {
+            height: 80px;
+            background-color: white;
+            color: black;
+            margin-top: 0;
+            /* bottom: 0; */
+            /* padding-top: 5px; */
+            font-size: 30pt;
+        }
+        .sidebar-content {
+            background-color: white;
+        }
+        .titleImg {
+            height: 100%;
+        }
+        ul {
+            margin-top: 0;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+     <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#issue" role="tab"><i class="fa fa-book"></i></a></li>
+                <li><a href="#contributors" role="tab"><i class="fa fa-users"></i></a></li>
+                <li><a href="#buy" role="tab"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="issue">
+                <h1 class="sidebar-header">
+                    <img class="titleImg" src="http://i.imgur.com/DQCEgQN.png">
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+
+                <p>PASSIVITY, pen and ink by Juliette Wu.</p>
+
+                <p>PRACTICE MAKES PERFECT and TODAY, TOMORROW, FOREVER?, multimedia art by editor-in-chief Jiaqi Kang.</p>
+
+                <p>Selected photography by Kevin Huang.</p>
+
+                <p>Selected multimedia artwork by Chris Qiu and Elaine Hsu.</p>
+
+                <p>Three poems by Kristin Chang on family, bodies, and futures.</p>
+
+                <p>An interview by web editor Emily Chen with Chinese American poet Chen Chen. The full interview will be available online soon.</p>
+
+                <p>ORANGE COLORED KNOWING, a prose piece by art director Elisabeth Siegel on the links between language and memory.</p>
+
+                <p>THE EVOLUTION OF WINGS, a metaphorical prose piece on diasporic sentiment by Rona Wang.</p>
+
+                <p>Selected poetry by Emily Chen (MILK & PESTO), Alan Dai (MELT & BE BORNE AGAIN), Kat Nham (CONVERSATION WITH MAMA IN INCENSE SMOKE), and Kirsten Latimer (SINGING LESSONS). </p>
+            </div>
+
+            <div class="sidebar-pane" id="contributors">
+                <h1 class="sidebar-header">CONTRIBUTORS<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                    <ul>
+                        <li><b>Kristin Chang (張欣明)</b>  is a 19 y.o. Atayal Taiwanese & Han Chinese queer girl living in California and New York. Her work has been published or is forthcoming in The Margins (Asian American Writers Workshop), the Shade Journal, Nailed Magazine, Muzzle, and elsewhere. Her debut chapbook "Past Lives, Future Bodies" is forthcoming from Black Lawrence Press in 2018. She can be found at kristinchang.com and on Twitter @KXinming.</li>
+
+                        <li><b>Emily Chen (谌月) </b>is a high school senior from San Jose, California. As editor-in-chief of her school’s literature and arts magazine, a varsity public forum debater, and a budding film enthusiast, she enjoys working in interactive humanities disciplines. Things that make her happy: neuroscience, Ghibli movies, and black sesame ice cream. Someday, she would like to visit the places and meet the people she reads and writes about.</li>
+
+                        <li><b>Evelyn Chua (蔡依玲) </b>is a sophomore studying graphic design. While Canada is her home, her heart resides in Malaysia. She finds inspiration from many sources from her Chinese-Malaysian heritage to the nooks and crannies within downtown Vancouver. When not playing with shapes, line and colour, she’ll be hopelessly composing music at her keyboard.</li>
+
+                        <li><b>Alan Dai (戴瑞祥)</b>, age 18, is a student from Boulder, Colorado by way of Albany, New York (his parents are from Jiangxi and Shanxi in China). He is a 2016 alumni of the Iowa Young Writers Studio, and enjoys writing about angsty boys and angstier men. He will be attending Harvard University in the fall, where he hopes to get his Mandarin to the point that he can meme bilingually.</li> 
+
+                        <li><b>Elaine Hsu (徐子文) </b>(b. 1997) is an artist from the Bay Area, currently residing in Chicago as a student at the School of the Art Institute of Chicago. Working predominantly in fiber, illustration, and installation, Elaine investigates the playful, yet disparaging, relationship between the inviting and grotesque that appears in the reflection of childhood memories. This contrast between good and bad spans subject matter throughout her work such as the intimacies of relationships, traces of identity, dreams, and personal memory. Ultimately, her work highlights the beauty and fun, or lack thereof, that exists in everyday life. </li>
+
+                        <li><b>Kevin KaiJie Huang (黄凯捷) </b>is a Chinese transgender boy who lives in California. He sees himself as a work in progress and is an amateur photographer (@kevinkaiphotography on Instagram). He recently graduated high school and was an editor for his school's yearbook. He was also president of his school's GSA and involves himself in the LGBT+ community as much he can despite having unsupportive parents. He will attend the University of California of Los Angeles starting in September.</li>
+
+                        <li><b>Jiaqi Kang (亢嘉琪) </b>is a seventeen-year-old from Geneva, Switzerland with heritage from Shanxi province, China. When not studying for the IB, she enjoys burning her tongue on tea and discussing complex theories that she only half-understands. An aspiring curator, she hopes to study history of art at university. </li>
+
+                        <li><b>Kirstin Wu Latimer (吳言卮)</b> is a Taiwanese-British poet from London. Her work has been published in ASH magazine, and she won the Dart Prize of the Martin Starkie awards for poetry (2016). She is an alumna of the Winter Tangerine Summer 2016 workshop, and is currently studying for an undergraduate degree at Oxford University in between campaigning, messy scribbling and surviving. </li>
+
+                        <li><b>Kat Nham 任嘵盈</b>, (she/they) is a Chinese-Vietnamese American womxn born to a Chinese Vietnamese refugee and a Hong Kong immigrant. They are currently studying Asian American & Asian Diaspora Studies and American Studies at UC Berkeley. Her writing has always been her way of understanding and honoring all of the identities she holds and the ancestors who brought her here.</li>
+
+
+                        <li>Having moved to Canada at the age of two, <b>Chris Qiu (邱浩燃)</b>, is soon beginning his degree in architecture at the University of Waterloo. After four years of being uprooted from his Chinese heritage in high school, he hopes to reconnect and have it become an integral part of his life and work. During his spare time, he likes to play piano, dabble in street photography, and contemplate music until 3 am.</li>
+
+                        <li><b>Elisabeth Siegel (朱明慧)</b> is a biracial freshman at Yale College studying global affairs. A writer, photographer, and designer, she hails from San Jose, CA and is frankly done with all this snow. She does publicity and design work for multiple organizations on campus. Her work has appeared in or is forthcoming in TRACK//FOUR, 3Elements Review, Canvas Literary Journal, Textploit, and others. She misses her cat.</li>
+
+                        <li><b>Rona Wang (王叶甜) </b>is an eighteen-year-old freshman at the Massachusetts Institute of Technology, studying mathematics with computer science. She has been nationally recognized by the Scholastic Art and Writing Awards, Sierra Nevada Review, the Adroit Prizes, and Claremont Review. This summer, she is Wogrammer's inaugural journalism fellow. When not writing, she is involved with activism and cat video appreciation. She is originally from Portland, Oregon.</li>
+
+                        <li><b>Juliette Wu (伍家荟)</b>  is a Chinese-American who resides in the port city of Shenzhen, Guangdong and studies at an
+                        international school. She has had formal artistic training and creates large-scale,
+                        approximately 50 x 50 pen-and-ink works both recreationally and for school.
+                        Pastimes include: writing, blogging, sketching anatomical figures,
+                        reading in the lamplight, learning languages, waiting for winter...</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-pane" id="buy">
+                <h1 class="sidebar-header">BUY<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <p><a href="http://tinyurl.com/sin5tic">tictail</a> (shipping included)</p>
+                <p><a href="http://tinyurl.com/sin5blurb">blurb</a> (shipping not included)</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="sidebar-map"></div>
+    <script type="text/javascript">
+        var map = L.map('map'/*, { zoomControl:false }*/).setView([0, -50], 2);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox.satellite',
+            accessToken: 'pk.eyJ1IjoiY2FrZXNvZndyYXRoIiwiYSI6Ijk5YWI3OTlhMGIxN2I1OWYzYjhlOWJmYjEwNTRjODU0In0._RjYIzLsA5cU-YM6dxGOLQ'
+        }).addTo(map);
+        // map.fitWorld().zoomIn();
+        // // map.setZoom(10);
+        // map.touchZoom.disable();
+        // map.doubleClickZoom.disable();
+        // map.scrollWheelZoom.disable();
+        // map.boxZoom.disable();
+        // map.keyboard.disable();
+
+        var sidebar = L.control.sidebar('sidebar').addTo(map);
+        sidebar.open("issue")
+
+        var contributors = [
+            {
+                "bio": "Alan Dai (戴瑞祥), age 18, is a student from Boulder, Colorado by way of Albany, New York (his parents are from Jiangxi and Shanxi in China). He is a 2016 alumni of the Iowa Young Writers Studio, and enjoys writing about angsty boys and angstier men. He will be attending Harvard University in the fall, where he hopes to get his Mandarin to the point that he can meme bilingually.",
+                "location": [42.3736, -71.1097]
+            },
+            {
+                "bio": "Elisabeth Siegel (朱明慧) is a biracial freshman at Yale College studying global affairs. A writer, photographer, and designer, she hails from San Jose, CA and is frankly done with all this snow. She does publicity and design work for multiple organizations on campus. Her work has appeared in or is forthcoming in TRACK//FOUR, 3Elements Review, Canvas Literary Journal, Textploit, and others. She misses her cat.",
+                "location": [41.3083, -72.9279]
+            },
+            {
+                "bio": "Jiaqi Kang (亢嘉琪) is a seventeen-year-old from Geneva, Switzerland with heritage from Shanxi province, China. When not studying for the IB, she enjoys burning her tongue on tea and discussing complex theories that she only half-understands. An aspiring curator, she hopes to study history of art at university.",
+                "location": [51.7520, -1.2577]
+            },
+            {
+                "bio": "Kevin KaiJie Huang (黄凯捷) is a Chinese transgender boy who lives in California. He sees himself as a work in progress and is an amateur photographer (@kevinkaiphotography on Instagram). He recently graduated high school and was an editor for his school's yearbook. He was also president of his school's GSA and involves himself in the LGBT+ community as much he can despite having unsupportive parents. He will attend the University of California of Los Angeles starting in September.",
+                "location": [34.0689, -118.4452]
+            },
+            {
+                "bio": "Emily Chen (谌月) is a high school senior from San Jose, California. As editor-in-chief of her school’s literature and arts magazine, a varsity public forum debater, and a budding film enthusiast, she enjoys working in interactive humanities disciplines. Things that make her happy: neuroscience, Ghibli movies, and black sesame ice cream. Someday, she would like to visit the places and meet the people she reads and writes about.",
+                "location": [37.3382, -121.8863]
+            },
+        ];
+        contributors.forEach(function(contrib){
+            var marker = L.marker(contrib["location"]).addTo(map);
+            marker.bindPopup(contrib["bio"]);
+        });
+    </script>
+</body>
+</html>
