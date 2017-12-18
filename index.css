@@ -1,0 +1,175 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+html, body, #map {
+    height: 100%;
+}
+./* active a {
+    background-color: grey;
+} */
+.sidebar-tabs {
+    /* border: 3px solid black; */
+}
+.sidebar-header {
+    height: 80px;
+    background-color: white;
+    color: black;
+    margin-top: 0;
+    /* bottom: 0; */
+    /* padding-top: 5px; */
+    font-size: 30pt;
+}
+.sidebar-content {
+    background-color: white;
+}
+.titleImg {
+    height: 100%;
+}
+ul {
+    /* margin-top: 0; */
+}
+.buyLink img {
+    width: 100%;
+}
+.column a {
+    background-color: white;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul {
+    /* padding-left: 20px; */
+}
+
+#modal {
+    padding: 20px;
+    min-width: 50%;
+}
+
+#modal img {
+    /* width: 100%; */
+}
+
+#logo_container {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 5px;
+}
+
+#logo {
+    width: 100%;
+}
+
+#navbar_container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#navbar_container li {
+    float: left;
+    width: 20%;
+}
+
+#navbar_container li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar_container a:hover:not(.active) {
+    background-color: #ccc;
+}
+
+a.active {
+    /* background-color:#4CAF50; */
+    border: 1.5px solid black;
+    /* border-radius: 10%; */
+}
+
+#content {
+    width: 80%;
+    margin-left: 10%;
+    padding: 5% 0;
+    text-align: center;
+}
+
+#homeIssues img {
+    width: 100%;
+}
+
+#issueList img {
+    width: 100%;
+}
+
+#social_navbar_container {
+    /* top: -15px; */
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 2%;
+}
+
+#social_navbar_container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#social_navbar_container li {
+    float: left;
+    width: 16.666666667%;
+}
+
+#social_navbar_container li a {
+    display: block;
+    color: black;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+}
+
+#social_navbar_container li span {
+    display: block;
+    color: black;
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+}
+
+#social_navbar_container a:hover:not(.active) {
+    background-color: #ccc;
+}
+
+#contributorsInfo .sidebar-header {
+    height: 40px;
+}
+
+#buyInfo .sidebar-header {
+    height: 40px;
+}
+
+.text {
+    padding-top: 20px;
+}
+
+#submitContainer {
+    /* text-align: right; */
+}
