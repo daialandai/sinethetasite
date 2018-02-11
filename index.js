@@ -38,6 +38,35 @@ $("a[title]").qtip({
 
 var markers = new L.FeatureGroup();
 
+var createSlideshow = function() { // suuper specialized 4now
+    if($("#slides").children().length !== 0) {
+        return;
+    }
+    // console.log("I'm runnin :)");
+    var imgs = [];
+    for(var issue_num = 5; issue_num >2; issue_num--) {
+        for(var img_num = 1; img_num < 7; img_num++) {
+            if(img_num === 1) {
+                imgs.push('<div class="previewContainer cover"><img src="./images/previews/' + issue_num + '_' + img_num + '.png"></div>');
+            }
+            else {
+                imgs.push('<div class="previewContainer"><img src="./images/previews/' + issue_num + '_' + img_num + '.png"></div>');
+            }
+        }
+    }
+    // console.log(imgs);
+    $("#slides").append(imgs);
+    $("#slides").slick({
+        autoplay: true,
+        autoplaySpeed: 3500,
+        prevArrow: '<i class="fa fa-arrow-circle-right slick-prev"></i>',
+        nextArrow: '<i class="fa fa-arrow-circle-right slick-next"></i>'
+        // height: ,
+        // width: 
+    });
+    // console.log("done!");
+};
+
 var hashChanged = function() {
     var hash = window.location.hash;
     // console.log("hash changed!", hash, /#issue\d$/.test(hash));
@@ -116,11 +145,13 @@ var hashChanged = function() {
             }, 100);
         }
         else {
+            // $("#slides").append("hi!");
             $("#navbar").children().children().removeClass("active");
             $("#navbar").children().children("#home").addClass("active");
             setTimeout(function() {
                 $("#content").load("./about/home.html", function(res, status, xhr) {
                     // console.log(res, status, xhr);
+                createSlideshow();
                 });
             }, 100);
         }

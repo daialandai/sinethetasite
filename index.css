@@ -111,7 +111,7 @@ a.active {
 }
 
 #homeIssues img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 #issueList img {
@@ -173,3 +173,29 @@ a.active {
 #submitContainer {
     /* text-align: right; */
 }
+
+.previewContainer img {
+    width: 100%;
+    /* margin-left: auto; */
+}
+
+/* .cover {
+    width: 50%;
+    margin-left: auto;
+} */
+
+.cover img {
+    width: 50%;
+    margin-left: 25%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+#bottom_bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
