@@ -73,7 +73,7 @@ var hashChanged = function() {
     if(/#issue\d$/.test(hash)) { //is an issue #
         markers.clearLayers();
         var issue_num = parseInt(hash[hash.length - 1]);
-        if((issue_num > 0) && (issue_num < 6)) {
+        if((issue_num > 0) && (issue_num < 7)) {
             $("#sidebar").css("opacity", "1");
             $(".leaflet-control").css("opacity", "1");
             sidebar.open("issueInfo");
@@ -85,18 +85,23 @@ var hashChanged = function() {
                 $("#issueInfoContainer").empty();
                 $("#issueInfoContainer").append(data.about);
                 $("#contributorsInfoContainer").empty();
+                
                 $("#contributorsInfoContainer").append(data.contributors.map(function(contrib, i) {
                     if(contrib.location) {
                         var marker = L.marker(contrib["location"]);
                         marker.bindPopup(contrib["bio"]);
                         markers.addLayer(marker);
                     }
-                    return "<p>" + contrib.bio + "</p>";
+                    return "<li>" + contrib.bio + "</li>" ;
                 }));
                 $("#tictail").empty();
-                $("#tictail").append("<a href=\"" + data.purchase.tictail + "\">tictail</a> (shipping included)");
+                if(data.purchase.tictail) {
+                    $("#tictail").append("<a href=\"" + data.purchase.tictail + "\">tictail</a> (shipping included)");
+                }
                 $("#blurb").empty();
-                $("#blurb").append("<a href=\"" + data.purchase.blurb + "\">blurb</a> (shipping not included)");
+                if(data.purchase.blurb) {
+                    $("#blurb").append("<a href=\"" + data.purchase.blurb + "\">blurb</a> (shipping not included)");
+                }
                 if(data.purchase.zine) {
                     $("#zine").empty();
                     $("#zine").append("<a href=\"" + data.purchase.zine + "\">digital zine</a> (abridged version)")
@@ -104,7 +109,7 @@ var hashChanged = function() {
                 map.addLayer(markers);
             });            
         }
-        else if((issue_num > 5) && (issue_num < 9)){ 
+        else if((issue_num > 6) && (issue_num < 9)){ 
             console.log("not released yet");
             $("#sidebar").css("opacity", "0");
             $(".leaflet-control").css("opacity", "0");

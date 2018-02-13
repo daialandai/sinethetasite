@@ -1,8 +1,11 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     overflow: hidden;
+}
+strong, b {
+    font-weight: bold;
 }
 html, body, #map {
     height: 100%;
@@ -10,14 +13,16 @@ html, body, #map {
 ./* active a {
     background-color: grey;
 } */
-.sidebar-tabs {
+#sidebar-tabs {
     /* border: 3px solid black; */
+    width: 80px !important;
 }
 .sidebar-header {
     height: 80px;
     background-color: white;
     color: black;
     margin-top: 0;
+    width: 100%;
     /* bottom: 0; */
     /* padding-top: 5px; */
     font-size: 30pt;
@@ -25,8 +30,11 @@ html, body, #map {
 .sidebar-content {
     background-color: white;
 }
+.sidebar-close {
+    display: none;
+}
 .titleImg {
-    height: 100%;
+    width: 100%;
 }
 ul {
     /* margin-top: 0; */
@@ -196,6 +204,14 @@ a.active {
 
 #bottom_bar {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#issueInfoContainer ul li{
+    margin-bottom: 20px;
+}
+
+#contributorsInfoContainer li {
     margin-bottom: 20px;
 }
 

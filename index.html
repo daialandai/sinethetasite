@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
     integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
     crossorigin=""/>    
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/Turbo87/sidebar-v2/master/css/leaflet-sidebar.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css">
@@ -40,15 +40,15 @@
 <body>
     <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
-        <div class="sidebar-tabs">
+        <div class="sidebar-tabs" id="sidebar-tabs">
             <ul role="tablist">
                 <li><a href="#issueInfo" role="tab"><i class="fa fa-book"></i></a></li>
                 <li><a href="#contributorsInfo" role="tab"><i class="fa fa-users"></i></a></li>
                 <li><a href="#buyInfo" role="tab"><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
-            <ul role="tablist">
+<!--             <ul role="tablist">
                 <li><a href="/" role="tab"><i class="fa fa-home"></i></a></li>
-            </ul>
+            </ul> -->
         </div>
 
         <!-- Tab panes -->
@@ -65,7 +65,7 @@
 
             <div class="sidebar-pane" id="contributorsInfo">
                 <h2 class="sidebar-header text">CONTRIBUTORS<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h2>
-                <div id="contributorsInfoContainer"></div>
+                <ul id="contributorsInfoContainer"></ul>
                 <br><br><center><a href="/">go home.</a></center><br>
             </div>
 
