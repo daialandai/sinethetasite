@@ -44,12 +44,12 @@ var createSlideshow = function() { // suuper specialized 4now
     }
     // console.log("I'm runnin :)");
     var imgs = [];
-    for(var issue_num = 5; issue_num >2; issue_num--) {
+    for(var issue_num = 6; issue_num >2; issue_num--) {
         for(var img_num = 1; img_num < 7; img_num++) {
             if(img_num === 1) {
                 imgs.push('<div class="previewContainer cover"><img src="./images/previews/' + issue_num + '_' + img_num + '.png"></div>');
             }
-            else {
+            else if(issue_num !== 6 || (issue_num === 6 && img_num !== 6)){
                 imgs.push('<div class="previewContainer"><img src="./images/previews/' + issue_num + '_' + img_num + '.png"></div>');
             }
         }
@@ -137,7 +137,7 @@ var hashChanged = function() {
         }
         // console.log("not issues");
         var about_id = hash.replace("#", "");
-        var match = about_id.match(/(team|submit|issues)/);
+        var match = about_id.match(/(team|submit|issues|apply)/);
         // console.log("about_id", about_id, "match", match);
         if(match) {
             // console.log("match!", "./about/" + match[0] + ".html");
