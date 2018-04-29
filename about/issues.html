@@ -1,29 +1,149 @@
-<div id="issueList">
-     
-    <!-- <hr><br> -->
+<html>
 
-    <a href="#issue6" ><img src="./images/issue6_color.png"></a>
-    <p><a href="#issue6">issue #6</a> was released in february 2018. its theme is CLEAR (清) </p>
+<head>
+    <link href="form.css" type="text/css" rel="stylesheet" />
+</head>
 
-    <a href="#issue5" ><img src="./images/issue5_color.png"></a>
-    <p><a href="#issue5">issue #5</a> was released in august 2017. its theme is FLOW (流)</p>
+<body>
+    <form id="preorderForm" action="https://script.google.com/macros/s/AKfycbzsTyAePabj7s9f58eP-v7EKAtyjw3yV0aajRpmGCUMb9K-GwQ/exec"
+        method="POST">
 
-    <a href="#issue4" ><img src="./images/issue4_color.png"></a>
-    <p><a href="#issue4">issue #4</a> was released in april 2017. its theme is ACROSS (岸)</p><br><br>
+        <h2>Preorder form</h2>
 
-    <a href="#issue3" ><img src="./images/issue3_color.png"></a>
-    <p><a href="#issue3">issue #3</a> was released in january 2017. its theme is LIGHT (阴)</p><br><br>
+        <p>Please complete this form in order to preorder sinθ #7 “MUD 泥”, which will be released on May 15, 2018.</p>
 
-    <a href="#issue2" ><img src="./images/issue2_color.png"></a>
-    <p><a href="#issue2">issue #2</a> was released in october 2016. its theme is COLOR (彩)</p><br><br>
+        <h3>Basic information</h3>
 
-    <a href="#issue1" ><img src="./images/issue1_color.png"></a>
-    <p><a href="#issue1">issue #1</a> was released in july 2016. its theme is BEGINNINGS (始)</p><br>
+        <label for="name">Full name</label>
+        <input name="name" type="text" placeholder="Name" autocomplete="name" required>
 
-    <hr><br>
+        <label for="email">E-mail address</label>
+        <input name="email" type="email" placeholder="E-mail" autocomplete="email" required>
 
-    <p><a href="#issue7">issue #7</a> will be released in may 2018. its theme is MUD (泥)</p><br>
+        <label for="copies">Number of copies</label>
+        <input name="copies" type="number" placeholder="Number of copies">
 
-    <p><a href="#issue8">issue #8</a> will be released in august 2018. its theme is GOLD (金)</p><br>
-    
-</div>
+        <label id="how" for="find">How did you find out about sinθ?</label>
+        <select name="find" required>
+            <option value="" selected disabled hidden>Select one</option>
+            <option value="facebook">Facebook</option>
+            <option value="tumblr">Tumblr</option>
+            <option value="instagram">Instagram</option>
+            <option value="sad&asian">Sad &amp; Asian page</option>
+            <option value="friend/fam">From a friend or family member</option>
+            <option value="contributor">From a contributor</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input id="howOther" name="findOther" type="text" placeholder="How did you find out?">
+
+        <label for="comments">Additional comments:</label>
+        <textarea name="comments" placeholder="Additional comments"></textarea>
+
+        <hr>
+
+        <h3>Shipping address</h3>
+
+        <label for="address">Shipping address</label>
+        <p>sinθ will not reveal your personal information and it will be used only for the purposes of mailing this issue.</p>
+
+        <label for="line1">Line 1 </label>
+        <input name="line1" type="text" placeholder="Line 1" autocomplete="shipping street-address">
+
+        <label for="line2">Line 2 </label>
+        <input name="line2" type="text" placeholder="Line 2">
+
+        <label for="city">City</label>
+        <input name="city" type="text" placeholder="City" autocomplete="shipping locality">
+
+        <label for="state">State or province</label>
+        <input name="state" type="text" placeholder="State or province" autocomplete="shipping region">
+
+        <label for="zip">Postal code</label>
+        <input name="zip" type="number" placeholder="Postal code" autocomplete="shipping postal-code">
+
+        <label for="country">Country</label>
+        <input name="country" type="text" placeholder="Country" autocomplete="shipping country">
+
+        <label for="phone">Phone number</label>
+        <input name="phone" type="tel" placeholder="Phone number" autocomplete="tel">
+
+        <hr>
+
+        <label>Payment</label>
+        <p>Please send $20 to our Paypal at
+            <a href="mailto:jiaqikang42@gmail.com">jiaqikang42@gmail.com</a> OR on Venmo to
+            <a href="https://venmo.com/elisabethsiegel">@elisabethsiegel</a>, and let us know your name. You will soon receive an email to confirm your order.</p>
+
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+
+    <div id="formSubmitted" style="display: none">
+        Thank you for submitting your preorder!
+    </div>
+
+    <script type="text/javascript" src="form.js"></script>
+
+    <div id="issueList">
+
+        <!-- <hr><br> -->
+
+        <a href="#issue6">
+            <img src="./images/issue6_color.png">
+        </a>
+        <p>
+            <a href="#issue6">issue #6</a> was released in february 2018. its theme is CLEAR (清) </p>
+
+        <a href="#issue5">
+            <img src="./images/issue5_color.png">
+        </a>
+        <p>
+            <a href="#issue5">issue #5</a> was released in august 2017. its theme is FLOW (流)</p>
+
+        <a href="#issue4">
+            <img src="./images/issue4_color.png">
+        </a>
+        <p>
+            <a href="#issue4">issue #4</a> was released in april 2017. its theme is ACROSS (岸)</p>
+        <br>
+        <br>
+
+        <a href="#issue3">
+            <img src="./images/issue3_color.png">
+        </a>
+        <p>
+            <a href="#issue3">issue #3</a> was released in january 2017. its theme is LIGHT (阴)</p>
+        <br>
+        <br>
+
+        <a href="#issue2">
+            <img src="./images/issue2_color.png">
+        </a>
+        <p>
+            <a href="#issue2">issue #2</a> was released in october 2016. its theme is COLOR (彩)</p>
+        <br>
+        <br>
+
+        <a href="#issue1">
+            <img src="./images/issue1_color.png">
+        </a>
+        <p>
+            <a href="#issue1">issue #1</a> was released in july 2016. its theme is BEGINNINGS (始)</p>
+        <br>
+
+        <hr>
+        <br>
+
+        <p>
+            <a href="#issue7">issue #7</a> will be released in may 2018. its theme is MUD (泥)</p>
+        <br>
+
+        <p>
+            <a href="#issue8">issue #8</a> will be released in august 2018. its theme is GOLD (金)</p>
+        <br>
+
+    </div>
+
+</body>
+
+</html>
