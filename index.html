@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-
     <title>Sine Theta</title>
-    <meta name="description" content="Sine Theta Issue #">
-    <meta name="author" content="Alan Dai">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-    crossorigin=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/Turbo87/sidebar-v2/master/js/leaflet-sidebar.min.js"></script>
-    <!--[if lte IE 8]><link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
+
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/navigo@5.3.3/lib/navigo.min.js"></script>
@@ -26,106 +16,178 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-    crossorigin=""/>    
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Turbo87/sidebar-v2/master/css/leaflet-sidebar.min.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="leaflet-sidebar.css" />
+    <link href="iziModal.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/qtip2/3.0.3/jquery.qtip.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <link href="index.css" rel="stylesheet">
 </head>
+
 <body>
     <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs" id="sidebar-tabs">
             <ul role="tablist">
-                <li><a href="#issueInfo" role="tab"><i class="fa fa-book"></i></a></li>
-                <li><a href="#contributorsInfo" role="tab"><i class="fa fa-users"></i></a></li>
-                <li><a href="#buyInfo" role="tab"><i class="fa fa-shopping-cart"></i></a></li>
+                <li>
+                    <a href="#issueInfo" role="tab">
+                        <i class="fa fa-book"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contributorsInfo" role="tab">
+                        <i class="fa fa-users"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#buyInfo" role="tab">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </li>
             </ul>
-<!--             <ul role="tablist">
-                <li><a href="/" role="tab"><i class="fa fa-home"></i></a></li>
-            </ul> -->
         </div>
 
         <!-- Tab panes -->
         <div class="sidebar-content">
             <div class="sidebar-pane" id="issueInfo">
                 <h1 class="sidebar-header" id="sidebar-header">
-                    <!-- <img class="titleImg" src="./issue5.png"> -->
-                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                    <span class="sidebar-close">
+                        <i class="fa fa-caret-left"></i>
+                    </span>
                 </h1>
                 <br>
                 <div id="issueInfoContainer"></div>
-                <br><br><center><a href="/">go home.</a></center><br>
+                <br>
+                <center>
+                    <a href="/">go home.</a>
+                </center>
+                <br>
             </div>
 
             <div class="sidebar-pane" id="contributorsInfo">
-                <h2 class="sidebar-header text">CONTRIBUTORS<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h2>
+                <h2 class="sidebar-header text">CONTRIBUTORS
+                    <span class="sidebar-close">
+                        <i class="fa fa-caret-left"></i>
+                    </span>
+                </h2>
                 <ul id="contributorsInfoContainer"></ul>
-                <br><br><center><a href="/">go home.</a></center><br>
+                <br>
+                <center>
+                    <a href="/">go home.</a>
+                </center>
+                <br>
             </div>
 
             <div class="sidebar-pane" id="buyInfo">
-                <h2 class="sidebar-header text">BUY<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h2>
+                <h2 class="sidebar-header text">BUY
+                    <span class="sidebar-close">
+                        <i class="fa fa-caret-left"></i>
+                    </span>
+                </h2>
                 <p id="tictail"></p>
                 <p id="blurb"></p>
                 <p id="zine"></p>
-                <br><br><center><a href="/">go home.</a></center><br>
+                <br>
+                <center>
+                    <a href="/">go home.</a>
+                </center>
+                <br>
             </div>
         </div>
     </div>
+
     <div id="map" class="sidebar-map"></div>
-    <div id="modal">
-        <div id="logo_container">
-            <img id="logo" src="./images/logo.png">
+    <div id="modal" style="max-width: unset!important">
+        <div id="modal-side" class="tabletGone">
+            <div id="logo_container">
+                <img id="logo" src="./images/logo.png">
+            </div>
+
+            <div>
+                <h3>About</h3>
+                <b>sinθ</b> is an international print-based creative arts magazine made by and for the sino diaspora.
+
+                <h3>Recent</h3>
+                submissions for
+                <a href="#issue8">issue #9 GHOST (鬼)</a> are now opened until October 1.
+
+                <h3>Shop</h3>
+                <!--<a href="http://sinetheta.tictail.com/product/sin%CE%B8-6-clear-%E6%B8%85">tictail</a> (shipping included in price)
+                <br> -->
+                <a href="http://www.blurb.com/b/8888480-sin-8-gold">blurb</a> (shipping not included in price)
+            </div>
+            <div id="social_navbar_container">
+                <h3>Connect</h3>
+                <ul id="social_navbar">
+                    <li>
+                        <a title="sinethetamagazine" href="http://sinethetamagazine.tumblr.com/">
+                            <i class="fa fa-tumblr-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="sinethetamag" href="http://instagram.com/sinethetamag">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="sinethetamagazine" href="http://facebook.com/sinethetamagazine">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="wechat" title="sinethetamag">
+                            <i class="fa fa-weixin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="sinethetamag@gmail.com" href="mailto:sinethetamag@gmail.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id="social_navbar_container">
-            <ul id="social_navbar">
-                <li><a title="sinethetamagazine" href="http://sinethetamagazine.tumblr.com/"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a></li>
-                <li><a title="sinethetamag" href="http://instagram.com/sinethetamag"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a title="sinethetamagazine" href="http://facebook.com/sinethetamagazine"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li><a id="wechat" title="sinethetamag"><i class="fa fa-weixin" aria-hidden="true"></i></a></li>
-                <li><a title="sinethetamag@gmail.com" href="mailto:sinethetamag@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-            </ul>
+        <div id="navbar_mobile" class="phoneShow">
+            <img src="./images/logo.png">
+            <i id="mobileBars" class="fa fa-bars"></i>
         </div>
         <!-- Page content -->
-        <div id="navbar_container">
+        <div id="navbar_container" class="phoneGone mobileMenu">
+            <div id="navbar_cont_bg"></div>
+            <div id="navbar_mobile_close" class="phoneShow">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </div>
             <ul id="navbar">
-                <li><a href="/#home" id="home">home</a></li>
-                <li><a href="/#team" id="team">team</a></li>
-                <li><a href="/#submit" id="submit">submit</a></li>
-                <li><a href="/#issues" id="issues">issues</a></li>
-                <li><a href="http://sinethetamagazine.tumblr.com/">blog</a></li>
-                <li><a href="https://www.redbubble.com/people/sinethetamag/collections/872706-sticker-pack-1" id="">merch</a></li>
-                <li><a href="http://paypal.me/jiaqikang">donate</a></li>
+                <li>
+                    <a href="/#home" id="home">home</a>
+                </li>
+                <li>
+                    <a href="/#team" id="team">team</a>
+                </li>
+                <li>
+                    <a href="/#submit" id="submit">submit</a>
+                </li>
+                <li>
+                    <a href="/#issues" id="issues">issues</a>
+                </li>
+                <li>
+                    <a href="http://sinethetamagazine.tumblr.com/">blog</a>
+                </li>
+                <li>
+                    <a href="https://www.redbubble.com/people/sinethetamag/collections/872706-sticker-pack-1">merch</a>
+                </li>
+                <li>
+                    <a href="http://paypal.me/jiaqikang">donate</a>
+                </li>
             </ul>
         </div>
         <div id="content">
-            
+
         </div>
-        <!-- <br> -->
-        <div id="bottom_bar">
-            <!-- <hr> -->
-            <!-- <div id="donate"><a title="jiaqikang" href="http://paypal.me/jiaqikang">donate to support us!</a></div> -->
-            <!-- <br><br> -->
-            site designed by <a href="https://github.com/daialandai">alan dai 戴瑞祥</a>
-        </div>
-        <br><br>
     </div>
     <script type="text/javascript" src="index.js"></script>
-    <!-- Start of StatCounter Code for Default Guide -->
-    <script type="text/javascript">
-        var sc_project=11571676;
-        var sc_invisible=1;
-        var sc_security="a80abc8b";
-        var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
-        document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
-    </script>
-    <noscript><div class="statcounter"><a title="Web Analytics" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11571676/0/a80abc8b/1/" alt="Web Analytics"></a></div></noscript>
-    <!-- End of StatCounter Code for Default Guide -->
 </body>
+
 </html>
