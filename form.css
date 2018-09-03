@@ -6,7 +6,7 @@ body {
 #preorderForm, #formSubmitted {
     font-family: inherit;
     padding: 1em;
-    background-color: #ECEFF1;
+    background-color: #FAFAFA;
     margin: 1em 0;
 }
 input, textarea, select, button {
